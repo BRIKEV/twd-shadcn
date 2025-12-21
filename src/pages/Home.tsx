@@ -4,24 +4,24 @@ const Homepage = () => {
   const components = [
     { name: "Accordion", path: "/accordion" },
     { name: "Alert Dialog", path: "/alert-dialog" },
-    { name: "Breadcrumb", path: "/breadcrumb" },
+    { name: "Breadcrumb", path: "/breadcrumb", wip: true },
     { name: "Button", path: "/button" },
-    { name: "Calendar", path: "/calendar" },
+    { name: "Calendar", path: "/calendar", wip: true },
     { name: "Checkbox", path: "/checkbox" },
-    { name: "Collapsible", path: "/collapsible" },
-    { name: "Command", path: "/command" },
-    { name: "Context Menu", path: "/context-menu" },
+    { name: "Collapsible", path: "/collapsible", wip: true },
+    { name: "Command", path: "/command", wip: true },
+    { name: "Context Menu", path: "/context-menu", wip: true },
     { name: "Dialog", path: "/dialog" },
     { name: "Drawer", path: "/drawer" },
     { name: "Dropdown Menu", path: "/dropdown-menu" },
-    { name: "Pagination", path: "/pagination" },
+    { name: "Pagination", path: "/pagination", wip: true },
     { name: "Popover", path: "/popover" },
     { name: "Radio Group", path: "/radio-group" },
     { name: "Select", path: "/select" },
     { name: "Slider", path: "/slider" },
-    { name: "Sonner", path: "/sonner" },
+    { name: "Sonner", path: "/sonner", wip: true },
     { name: "Switch", path: "/switch" },
-    { name: "Table", path: "/table" },
+    { name: "Table", path: "/table", wip: true },
     { name: "Tabs", path: "/tabs" },
     { name: "Tooltip", path: "/tooltip" },
   ];
@@ -73,6 +73,7 @@ const Homepage = () => {
               className="block p-4 rounded-lg border border-border hover:border-primary hover:bg-accent transition-colors"
             >
               <span className="font-medium">{component.name}</span>
+              {component.wip && <span className="text-xs text-muted-foreground ml-2">(WIP)</span>}
             </Link>
           ))}
         </div>
