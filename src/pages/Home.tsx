@@ -40,9 +40,21 @@ const Homepage = () => {
             Each component page showcases the component implementation alongside its corresponding test code, 
             making it easy to understand how to write tests for your shadcn/ui components.
           </p>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground mb-4">
             If you're using shadcn/ui in your project, this guide will help you see how TWD simplifies 
             testing your frontend components with clean, maintainable test patterns.
+          </p>
+          <p className="text-muted-foreground">
+            For more information about TWD, visit the{" "}
+            <a 
+              href="https://brikev.github.io/twd/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              official documentation
+            </a>
+            .
           </p>
         </div>
       </div>
