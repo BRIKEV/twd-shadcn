@@ -11,6 +11,7 @@ const Homepage = () => {
     { name: "Collapsible", path: "/collapsible" },
     { name: "Command", path: "/command", wip: true },
     { name: "Context Menu", path: "/context-menu", wip: true },
+    { name: "Data Table", path: "/data-table", wip: true },
     { name: "Dialog", path: "/dialog" },
     { name: "Drawer", path: "/drawer" },
     { name: "Dropdown Menu", path: "/dropdown-menu" },
@@ -21,7 +22,7 @@ const Homepage = () => {
     { name: "Slider", path: "/slider" },
     { name: "Sonner", path: "/sonner", wip: true },
     { name: "Switch", path: "/switch" },
-    { name: "Table", path: "/table", wip: true },
+    { name: "Table", path: "/table" },
     { name: "Tabs", path: "/tabs" },
     { name: "Tooltip", path: "/tooltip" },
   ];
