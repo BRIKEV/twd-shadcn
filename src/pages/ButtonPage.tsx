@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CodeBlock } from "@/components/code-block";
+import { ComponentDocs } from "@/components/component-docs";
 import { useState } from "react";
 import { Link } from "react-router";
 
@@ -53,33 +52,17 @@ const ButtonExample = () => {
       
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Preview</h2>
-        <div className="border rounded-lg p-8 bg-background flex items-center justify-center min-h-[200px]">
+        <div className="border rounded-lg p-8 bg-background flex items-center justify-center">
           <Button onClick={handleClick}>Click Me {clickCount}</Button>
         </div>
       </div>
 
-      <Tabs defaultValue="test" className="w-full">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="test">TWD Test</TabsTrigger>
-          <TabsTrigger value="code">Component Code</TabsTrigger>
-        </TabsList>
-        <TabsContent value="test" className="mt-4">
-          <div className="space-y-4">
-            <p className="text-sm text-muted-foreground">
-              This test demonstrates how to test button interactions with TWD, including clicks and text updates.
-            </p>
-            <CodeBlock code={testCode} language="typescript" />
-          </div>
-        </TabsContent>
-        <TabsContent value="code" className="mt-4">
-          <div className="space-y-4">
-            <p className="text-sm text-muted-foreground">
-              Component implementation showing a button with click counter functionality.
-            </p>
-            <CodeBlock code={componentCode} language="tsx" />
-          </div>
-        </TabsContent>
-      </Tabs>
+      <ComponentDocs
+        testCode={testCode}
+        testDescription="This test demonstrates how to test button interactions with TWD, including clicks and text updates."
+        componentCode={componentCode}
+        componentDescription="Component implementation showing a button with click counter functionality."
+      />
     </div>
   );
 };

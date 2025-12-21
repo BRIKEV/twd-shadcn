@@ -1,6 +1,10 @@
 import { Link } from "react-router";
+import { ComponentDocs } from "@/components/component-docs";
 
 const CheckboxPage = () => {
+  const testCode = `// WIP: Test code coming soon`;
+  const componentCode = `// WIP: Component code coming soon`;
+
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <Link to="/" className="text-primary hover:underline mb-4 inline-block">
@@ -10,22 +14,18 @@ const CheckboxPage = () => {
       <h1 className="text-4xl font-bold mb-6">Checkbox</h1>
       
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Component Usage</h2>
-        <div className="bg-muted/50 p-6 rounded-lg">
-          <p className="text-muted-foreground mb-4">
-            Component implementation code will be added here.
-          </p>
+        <h2 className="text-2xl font-semibold mb-4">Preview</h2>
+        <div className="border rounded-lg p-8 bg-background flex items-center justify-center min-h-[200px]">
+          <p className="text-muted-foreground">Component preview coming soon</p>
         </div>
       </div>
 
-      <div>
-        <h2 className="text-2xl font-semibold mb-4">TWD Test Code</h2>
-        <div className="bg-muted/50 p-6 rounded-lg">
-          <p className="text-muted-foreground mb-4">
-            TWD test code will be added here.
-          </p>
-        </div>
-      </div>
+      <ComponentDocs
+        testCode={testCode}
+        testDescription="Test documentation coming soon."
+        componentCode={componentCode}
+        componentDescription="Component implementation coming soon."
+      />
     </div>
   );
 };
