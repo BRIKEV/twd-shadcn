@@ -4,8 +4,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: 'https://brikev.github.io/twd-shadcn/',
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '/' : '/twd-shadcn/',
   plugins: [
     react({
       babel: {
@@ -19,4 +19,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+}))
