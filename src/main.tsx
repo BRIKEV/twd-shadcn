@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider } from "react-router/dom";
@@ -23,7 +23,13 @@ if (import.meta.env.DEV) {
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <Suspense fallback={
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-muted-foreground">Loading...</div>
+        </div>
+      }>
+        <RouterProvider router={router} />
+      </Suspense>
     </ThemeProvider>
   </StrictMode>,
 )

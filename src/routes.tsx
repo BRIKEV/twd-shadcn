@@ -1,27 +1,30 @@
 import { createBrowserRouter } from "react-router";
+import { lazy } from "react";
 import Homepage from "./pages/Home";
-import AccordionPage from "./pages/AccordionPage";
-import AlertDialogPage from "./pages/AlertDialogPage";
-import BreadcrumbPage from "./pages/BreadcrumbPage";
-import ButtonPage from "./pages/ButtonPage";
-import CalendarPage from "./pages/CalendarPage";
-import CheckboxPage from "./pages/CheckboxPage";
-import CollapsiblePage from "./pages/CollapsiblePage";
-import CommandPage from "./pages/CommandPage";
-import ContextMenuPage from "./pages/ContextMenuPage";
-import DialogPage from "./pages/DialogPage";
-import DrawerPage from "./pages/DrawerPage";
-import DropdownMenuPage from "./pages/DropdownMenuPage";
-import PaginationPage from "./pages/PaginationPage";
-import PopoverPage from "./pages/PopoverPage";
-import RadioGroupPage from "./pages/RadioGroupPage";
-import SelectPage from "./pages/SelectPage";
-import SliderPage from "./pages/SliderPage";
-import SonnerPage from "./pages/SonnerPage";
-import SwitchPage from "./pages/SwitchPage";
-import TablePage from "./pages/TablePage";
-import TabsPage from "./pages/TabsPage";
-import TooltipPage from "./pages/TooltipPage";
+
+// Lazy load all component pages
+const AccordionPage = lazy(() => import("./pages/AccordionPage"));
+const AlertDialogPage = lazy(() => import("./pages/AlertDialogPage"));
+const BreadcrumbPage = lazy(() => import("./pages/BreadcrumbPage"));
+const ButtonPage = lazy(() => import("./pages/ButtonPage"));
+const CalendarPage = lazy(() => import("./pages/CalendarPage"));
+const CheckboxPage = lazy(() => import("./pages/CheckboxPage"));
+const CollapsiblePage = lazy(() => import("./pages/CollapsiblePage"));
+const CommandPage = lazy(() => import("./pages/CommandPage"));
+const ContextMenuPage = lazy(() => import("./pages/ContextMenuPage"));
+const DialogPage = lazy(() => import("./pages/DialogPage"));
+const DrawerPage = lazy(() => import("./pages/DrawerPage"));
+const DropdownMenuPage = lazy(() => import("./pages/DropdownMenuPage"));
+const PaginationPage = lazy(() => import("./pages/PaginationPage"));
+const PopoverPage = lazy(() => import("./pages/PopoverPage"));
+const RadioGroupPage = lazy(() => import("./pages/RadioGroupPage"));
+const SelectPage = lazy(() => import("./pages/SelectPage"));
+const SliderPage = lazy(() => import("./pages/SliderPage"));
+const SonnerPage = lazy(() => import("./pages/SonnerPage"));
+const SwitchPage = lazy(() => import("./pages/SwitchPage"));
+const TablePage = lazy(() => import("./pages/TablePage"));
+const TabsPage = lazy(() => import("./pages/TabsPage"));
+const TooltipPage = lazy(() => import("./pages/TooltipPage"));
 
 const router = createBrowserRouter([
   {

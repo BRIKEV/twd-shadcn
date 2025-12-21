@@ -57,6 +57,7 @@ const Homepage = () => {
             <Link
               key={component.path}
               to={component.path}
+              prefetch="intent"
               className="block p-4 rounded-lg border border-border hover:border-primary hover:bg-accent transition-colors"
             >
               <span className="font-medium">{component.name}</span>
