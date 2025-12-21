@@ -27,6 +27,11 @@ const TablePage = lazy(() => import("./pages/TablePage"));
 const TabsPage = lazy(() => import("./pages/TabsPage"));
 const TooltipPage = lazy(() => import("./pages/TooltipPage"));
 
+const getBasename = () => {
+  const isProd = import.meta.env.PROD;
+  return isProd ? '/twd-shadcn/' : '/';
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -128,6 +133,6 @@ const router = createBrowserRouter([
     path: "*",
     element: <div>404 Not Found</div>,
   }
-]);
+], { basename: getBasename() });
 
 export default router;
