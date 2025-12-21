@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import { ModeToggle } from "@/components/mode-toggle";
 
 const Homepage = () => {
   const components = [
@@ -29,9 +28,6 @@ const Homepage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <div className="fixed top-4 right-4 z-50">
-        <ModeToggle />
-      </div>
       <div className="mb-12 text-center">
         <h1 className="text-5xl font-bold mb-4">TWD + shadcn/ui</h1>
         <p className="text-xl text-muted-foreground mb-6">
