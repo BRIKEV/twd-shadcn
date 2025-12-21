@@ -1,75 +1,117 @@
-# React + TypeScript + Vite
+# TWD + shadcn/ui Testing Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive interactive guide demonstrating how to test shadcn/ui components using **TWD (Testing While Developing)**.
 
-Currently, two official plugins are available:
+## 🎯 What is This?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository showcases testing patterns for 22+ shadcn/ui components. Each component page displays:
+- **Live Component Preview** – Interactive demonstration
+- **Component Code** – Reusable implementation example
+- **TWD Test Code** – Complete test patterns with recommended selectors
 
-## React Compiler
+Perfect for developers learning how to test shadcn/ui components effectively.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📦 Features
 
-Note: This will impact Vite dev & build performances.
+- **16 Fully Documented Components** with TWD tests
+- **7 WIP Placeholder Pages** (Breadcrumb, Calendar, Command, Context Menu, Sonner, Data Table)
+## 🚀 Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Opens at `http://localhost:5173` with TWD test sidebar enabled in dev mode.
+
+### Build
+
+```bash
+npm run build
+```
+
+Optimized production build ready for GitHub Pages or any static host.
+
+## 📋 Component Coverage
+
+### ✅ Fully Implemented (With TWD Tests)
+
+- Accordion
+- Alert Dialog
+- Button
+- Checkbox
+- Collapsible
+- Dialog
+- Drawer
+- Dropdown Menu
+- Pagination
+- Popover
+- Radio Group
+- Select
+- Slider
+- Switch
+- Table (Basic)
+- Tabs
+- Tooltip
+
+### 🚧 Work in Progress (WIP)
+
+- Breadcrumb
+- Calendar
+- Command
+- Context Menu
+- Data Table (TanStack)
+- Sonner
+
+## 🧪 Testing Patterns
+
+### Key Testing Concepts
+
+**screenDom** – Standard DOM queries
+```javascript
+await screenDom.findByRole('button', { name: 'Click me' });
+```
+
+**screenDomGlobal** – Portal-rendered elements (dialogs, popovers, tooltips)
+```javascript
+await screenDomGlobal.findByText('Tooltip content');
+```
+
+**Assertions**
+```javascript
+twd.should(element, 'be.visible');
+expect(element).eql(null);  // For non-existence
+```
+
+### Selector Best Practices
+
+- **Tables:** Use `role:'table'`, `columnheader`, text content for rows
+- **Portals:** Use `screenDomGlobal` for dialogs, drawers, popovers, tooltips
+- **Forms:** Use `findByLabelText()`, `findByRole()` for inputs
+- **Navigation:** Use link text and button names
+
+## 📖 Resources
+
+- [TWD Official Docs](https://brikev.github.io/twd/)
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
+- [React Router v7](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## 📝 License
+
+MIT
+
+---
+
+**Happy TWD Testing! 🎉**

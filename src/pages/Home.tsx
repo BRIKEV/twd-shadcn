@@ -37,7 +37,7 @@ const Homepage = () => {
         <div className="max-w-2xl mx-auto text-left bg-muted/50 p-6 rounded-lg">
           <h2 className="text-2xl font-semibold mb-3">About This Repository</h2>
           <p className="text-muted-foreground mb-4">
-            This repository demonstrates how to test shadcn/ui components using TWD (Testing With Dignity). 
+            This repository demonstrates how to test shadcn/ui components using TWD (Testing While Developing). 
             Each component page showcases the component implementation alongside its corresponding test code, 
             making it easy to understand how to write tests for your shadcn/ui components.
           </p>

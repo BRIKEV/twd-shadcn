@@ -12,6 +12,7 @@ const CheckboxPage = lazy(() => import("./pages/CheckboxPage"));
 const CollapsiblePage = lazy(() => import("./pages/CollapsiblePage"));
 const CommandPage = lazy(() => import("./pages/CommandPage"));
 const ContextMenuPage = lazy(() => import("./pages/ContextMenuPage"));
+const DataTablePage = lazy(() => import("./pages/DataTablePage"));
 const DialogPage = lazy(() => import("./pages/DialogPage"));
 const DrawerPage = lazy(() => import("./pages/DrawerPage"));
 const DropdownMenuPage = lazy(() => import("./pages/DropdownMenuPage"));
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
   {
     path: "/context-menu",
     Component: ContextMenuPage,
+  },
+  {
+    path: "/data-table",
+    Component: DataTablePage,
   },
   {
     path: "/dialog",

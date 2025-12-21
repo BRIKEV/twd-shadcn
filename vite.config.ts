@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: 'https://brikev.github.io/twd-shadcn/',
   plugins: [
     react({
       babel: {
