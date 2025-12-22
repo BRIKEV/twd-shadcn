@@ -9,7 +9,7 @@ const Homepage = () => {
     { name: "Calendar", path: "/calendar", wip: true },
     { name: "Checkbox", path: "/checkbox" },
     { name: "Collapsible", path: "/collapsible" },
-    { name: "Command", path: "/command", wip: true },
+    { name: "Command", path: "/command" },
     { name: "Context Menu", path: "/context-menu", wip: true },
     { name: "Data Table", path: "/data-table", wip: true },
     { name: "Dialog", path: "/dialog" },
