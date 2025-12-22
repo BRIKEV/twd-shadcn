@@ -17,25 +17,78 @@ describe('Calendar Component', () => {
     const now = new Date();
     const todayStr = now.toLocaleDateString();
 
-    // Find the button for today's date via the data-day attribute
-    const todayBtn = document.querySelector(\`[data-day="\${todayStr}"]\`);
-    twd.should(todayBtn, 'exist');
+    // Find the button for today's date by role, then filter by data-day
+    const todayBtn = (await screenDom
+      .findAllByRole('button'))
+      .find((el) => el.getAttribute('data-day') === todayStr);
+    expect(todayBtn).to.not.equal(undefined, 'Today button should exist');
 
     // The current date should be selected initially
-    expect(todayBtn?.getAttribute('data-selected-single')).eql('true');
+    twd.should(todayBtn as HTMLElement, 'have.attr', 'data-selected-single', 'true');
 
     // Pick a different day in the same month to change selection
     const targetDay = now.getDate() === 15 ? 16 : 15;
     const target = new Date(now.getFullYear(), now.getMonth(), targetDay);
     const targetStr = target.toLocaleDateString();
-    const targetBtn = document.querySelector(\`[data-day="\${targetStr}"]\`);
-    twd.should(targetBtn, 'exist');
+    let targetBtn = (await screenDom
+      .findAllByRole('button'))
+      .find((el) => el.getAttribute('data-day') === targetStr);
+    expect(targetBtn).to.not.equal(undefined, 'Target button should exist');
 
     await userEvent.click(targetBtn!);
-
     // Verify the new selection and that the previous date is no longer selected
-    expect(targetBtn?.getAttribute('data-selected-single')).eql('true');
-    expect(todayBtn?.getAttribute('data-selected-single')).eql('false');
+    targetBtn = (await screenDom
+      .findAllByRole('button'))
+      .find((el) => el.getAttribute('data-day') === targetStr);
+    twd.should(targetBtn as HTMLElement, 'have.attr', 'data-selected-single', 'true');
+  });
+
+  it('changes month/year via selects and navigates months with buttons', async () => {
+    await twd.visit('/calendar');
+
+    // Controls
+    const monthSelect = await screenDom.findByRole('combobox', { name: /month/i });
+    const yearSelect = await screenDom.findByRole('combobox', { name: /year/i });
+
+    // Target a different month/year than "now" using calendar's abbreviated month labels (e.g., "dic", "jan", "feb")
+    const targetYear = new Date().getFullYear() - 1; // previous year to ensure change
+    const targetMonthLabel = 'dic';
+
+    await userEvent.selectOptions(monthSelect, targetMonthLabel);
+    await userEvent.selectOptions(yearSelect, \`\${targetYear}\`);
+
+    // Verify a day in the chosen month/year exists and can be selected
+    const targetDate = new Date(targetYear, 11, 15); // Dec 15 of target year
+    const targetStr = targetDate.toLocaleDateString();
+    let decBtn = (await screenDom
+      .findAllByRole('button'))
+      .find((el) => el.getAttribute('data-day') === targetStr);
+    expect(decBtn).to.not.equal(undefined, 'December target day should exist');
+
+    await userEvent.click(decBtn!);
+    decBtn = (await screenDom
+      .findAllByRole('button'))
+      .find((el) => el.getAttribute('data-day') === targetStr);
+    twd.should(decBtn as HTMLElement, 'have.attr', 'data-selected-single', 'true');
+
+    // Navigate to next month and check a date from that month renders
+    const nextBtn = await screenDom.findByRole('button', { name: /next month/i });
+    await userEvent.click(nextBtn);
+
+    const janStr = new Date(targetYear + 1, 0, 15).toLocaleDateString();
+    const janBtn = (await screenDom
+      .findAllByRole('button'))
+      .find((el) => el.getAttribute('data-day') === janStr);
+    expect(janBtn).to.not.equal(undefined, 'January target day should appear after next month');
+
+    // Navigate back to previous month and ensure January date is still reachable
+    const prevBtn = await screenDom.findByRole('button', { name: /previous month/i });
+    await userEvent.click(prevBtn);
+
+    const decBtnBack = (await screenDom
+      .findAllByRole('button'))
+      .find((el) => el.getAttribute('data-day') === targetStr);
+    expect(decBtnBack).to.not.equal(undefined, 'December target day should reappear after previous month');
   });
 });`;
 

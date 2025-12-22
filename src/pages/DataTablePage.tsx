@@ -15,7 +15,7 @@ const DataTablePage = () => {
       
       <div className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Preview</h2>
-        <div className="border rounded-lg p-8 bg-background flex items-center justify-center min-h-[200px]">
+        <div className="border rounded-lg p-8 bg-background flex items-center justify-center">
           <p className="text-muted-foreground">Complex data table with TanStack Table coming soon</p>
         </div>
       </div>
