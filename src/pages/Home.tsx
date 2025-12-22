@@ -6,7 +6,7 @@ const Homepage = () => {
     { name: "Alert Dialog", path: "/alert-dialog" },
     { name: "Breadcrumb", path: "/breadcrumb" },
     { name: "Button", path: "/button" },
-    { name: "Calendar", path: "/calendar", wip: true },
+    { name: "Calendar", path: "/calendar" },
     { name: "Checkbox", path: "/checkbox" },
     { name: "Collapsible", path: "/collapsible" },
     { name: "Command", path: "/command" },
