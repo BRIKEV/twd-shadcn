@@ -4,7 +4,7 @@ const Homepage = () => {
   const components = [
     { name: "Accordion", path: "/accordion" },
     { name: "Alert Dialog", path: "/alert-dialog" },
-    { name: "Breadcrumb", path: "/breadcrumb", wip: true },
+    { name: "Breadcrumb", path: "/breadcrumb" },
     { name: "Button", path: "/button" },
     { name: "Calendar", path: "/calendar", wip: true },
     { name: "Checkbox", path: "/checkbox" },
