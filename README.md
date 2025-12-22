@@ -13,8 +13,8 @@ Perfect for developers learning how to test shadcn/ui components effectively.
 
 ## 📦 Features
 
-- **16 Fully Documented Components** with TWD tests
-- **7 WIP Placeholder Pages** (Breadcrumb, Calendar, Command, Context Menu, Sonner, Data Table)
+- **21 Fully Documented Components** with TWD tests
+- **2 WIP Placeholder Pages** (Range Calendar, Data Table)
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -49,9 +49,13 @@ Optimized production build ready for GitHub Pages or any static host.
 
 - Accordion
 - Alert Dialog
+- Breadcrumb
 - Button
+- Calendar
 - Checkbox
 - Collapsible
+- Command
+- Context Menu
 - Dialog
 - Drawer
 - Dropdown Menu
@@ -60,6 +64,7 @@ Optimized production build ready for GitHub Pages or any static host.
 - Radio Group
 - Select
 - Slider
+- Sonner
 - Switch
 - Table (Basic)
 - Tabs
@@ -67,12 +72,8 @@ Optimized production build ready for GitHub Pages or any static host.
 
 ### 🚧 Work in Progress (WIP)
 
-- Breadcrumb
-- Calendar
-- Command
-- Context Menu
+- Range Calendar
 - Data Table (TanStack)
-- Sonner
 
 ## 🧪 Testing Patterns
 
