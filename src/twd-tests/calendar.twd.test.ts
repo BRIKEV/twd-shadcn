@@ -1,10 +1,6 @@
 import { twd, screenDom, userEvent, expect } from 'twd-js';
 import { describe, it } from 'twd-js/runner';
 
-// Recommended selectors for Calendar:
-// - Use the `data-day` attribute to target specific dates: MM/DD/YYYY (per locale)
-// - Verify selection using `data-selected-single="true"` on the day button
-
 describe('Calendar Component', () => {
   it('selects dates by data-day and verifies selected state', async () => {
     await twd.visit('/calendar');
@@ -46,9 +42,12 @@ describe('Calendar Component', () => {
     const monthSelect = await screenDom.findByRole('combobox', { name: /month/i });
     const yearSelect = await screenDom.findByRole('combobox', { name: /year/i });
 
-    // Target a different month/year than "now" using calendar's abbreviated month labels (e.g., "dic", "jan", "feb")
+    // Target a different month/year than "now" using calendar's abbreviated month labels
+    // Generate the month label dynamically to be locale-agnostic
     const targetYear = new Date().getFullYear() - 1; // previous year to ensure change
-    const targetMonthLabel = 'dic';
+    const targetMonthIndex = 11; // December (0-indexed)
+    const targetMonthDate = new Date(targetYear, targetMonthIndex, 1);
+    const targetMonthLabel = targetMonthDate.toLocaleString('default', { month: 'short' });
 
     await userEvent.selectOptions(monthSelect, targetMonthLabel);
     await userEvent.selectOptions(yearSelect, `${targetYear}`);

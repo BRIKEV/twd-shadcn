@@ -50,9 +50,12 @@ describe('Calendar Component', () => {
     const monthSelect = await screenDom.findByRole('combobox', { name: /month/i });
     const yearSelect = await screenDom.findByRole('combobox', { name: /year/i });
 
-    // Target a different month/year than "now" using calendar's abbreviated month labels (e.g., "dic", "jan", "feb")
+    // Target a different month/year than "now" using calendar's abbreviated month labels
+    // Generate the month label dynamically to be locale-agnostic
     const targetYear = new Date().getFullYear() - 1; // previous year to ensure change
-    const targetMonthLabel = 'dic';
+    const targetMonthIndex = 11; // December (0-indexed)
+    const targetMonthDate = new Date(targetYear, targetMonthIndex, 1);
+    const targetMonthLabel = targetMonthDate.toLocaleString('default', { month: 'short' });
 
     await userEvent.selectOptions(monthSelect, targetMonthLabel);
     await userEvent.selectOptions(yearSelect, \`\${targetYear}\`);

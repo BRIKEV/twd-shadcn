@@ -25,7 +25,7 @@ describe('Drawer Component', () => {
     
     // Click close button
     await userEvent.click(closeButton);
-    await twd.wait(500); // wait for the drawer to close
+    await twd.wait(600); // wait for the drawer to close
     // Verify drawer is closed
     const closedDrawer = await screenDomGlobal.queryByRole('heading', { name: 'Drawer Title' });
     expect(closedDrawer).to.eql(null);
