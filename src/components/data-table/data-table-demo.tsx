@@ -1,90 +1,3 @@
-import { Link } from "react-router";
-import { ComponentDocs } from "@/components/component-docs";
-import { DataTableDemo } from "@/components/data-table/data-table-demo";
-
-const DataTablePage = () => {
-  const testCode = `// WIP: Data Table tests with TanStack Table coming soon
-// Will test sorting, filtering, pagination, row selection, and column visibility`;
-
-  const componentCode = `// types.ts
-export type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
-
-// data.ts
-import type { Payment } from "./types";
-
-export const data: Payment[] = [
-  {
-    id: "m5gr84i9",
-    amount: 316,
-    status: "success",
-    email: "ken99@example.com",
-  },
-  // ... more data
-]
-
-// columns.tsx
-import * as React from "react";
-import { ArrowUpDown, MoreHorizontal } from "lucide-react";
-import type { ColumnDef } from "@tanstack/react-table";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import type { Payment } from "./types";
-
-export const columns: ColumnDef<Payment>[] = [
-  {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
-  {
-    accessorKey: "email",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Email
-          <ArrowUpDown />
-        </Button>
-      );
-    },
-    cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
-  },
-  // ... more columns
-]
-
-// data-table-demo.tsx
 import * as React from "react";
 import {
   flexRender,
@@ -98,6 +11,7 @@ import {
   type VisibilityState,
 } from "@tanstack/react-table";
 import { ChevronDown } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -119,8 +33,11 @@ import { data } from "./data";
 
 export function DataTableDemo() {
   const [sorting, setSorting] = React.useState<SortingState>([]);
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
-  const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
+    []
+  );
+  const [columnVisibility, setColumnVisibility] =
+    React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState({});
 
   const table = useReactTable({
@@ -256,31 +173,5 @@ export function DataTableDemo() {
       </div>
     </div>
   );
-}`;
+}
 
-  return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <Link to="/" className="text-primary hover:underline mb-4 inline-block">
-        ← Back to Home
-      </Link>
-      
-      <h1 className="text-4xl font-bold mb-6">Data Table</h1>
-      
-      <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Preview</h2>
-        <div className="border rounded-lg p-8 bg-background">
-          <DataTableDemo />
-        </div>
-      </div>
-
-      <ComponentDocs
-        testCode={testCode}
-        testDescription="Test documentation coming soon. Will demonstrate testing advanced features like sorting, filtering, pagination, row selection, and column visibility."
-        componentCode={componentCode}
-        componentDescription="A feature-rich data table powered by TanStack Table with column sorting, row filtering, pagination controls, row selection, and column visibility toggles. The component is split into multiple files: types.ts, data.ts, columns.tsx, and data-table-demo.tsx."
-      />
-    </div>
-  );
-};
-
-export default DataTablePage;
