@@ -12,7 +12,7 @@ const Homepage = () => {
     { name: "Collapsible", path: "/collapsible" },
     { name: "Command", path: "/command" },
     { name: "Context Menu", path: "/context-menu" },
-    { name: "Data Table", path: "/data-table", wip: true },
+    { name: "Data Table", path: "/data-table" },
     { name: "Dialog", path: "/dialog" },
     { name: "Drawer", path: "/drawer" },
     { name: "Dropdown Menu", path: "/dropdown-menu" },
