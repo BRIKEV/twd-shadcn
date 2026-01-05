@@ -9,14 +9,19 @@ const CalendarPage = () => {
   const testCode = `import { twd, screenDom, userEvent, expect } from 'twd-js';
 import { describe, it } from 'twd-js/runner';
 
+// Helper function to format dates consistently across platforms
+// Uses 'en-US' locale to ensure consistent format (M/D/YYYY) regardless of system locale
+const formatDateForCalendar = (date: Date): string => {
+  return date.toLocaleDateString();
+};
+
 describe('Calendar Component', () => {
   it('selects dates by data-day and verifies selected state', async () => {
     await twd.visit('/calendar');
 
-    // Compute today's date string using the same locale as the component
+    // Compute today's date string using consistent locale formatting
     const now = new Date();
-    const todayStr = now.toLocaleDateString();
-
+    const todayStr = formatDateForCalendar(now);
     // Find the button for today's date by role, then filter by data-day
     const todayBtn = (await screenDom
       .findAllByRole('button'))
@@ -29,7 +34,7 @@ describe('Calendar Component', () => {
     // Pick a different day in the same month to change selection
     const targetDay = now.getDate() === 15 ? 16 : 15;
     const target = new Date(now.getFullYear(), now.getMonth(), targetDay);
-    const targetStr = target.toLocaleDateString();
+    const targetStr = formatDateForCalendar(target);
     let targetBtn = (await screenDom
       .findAllByRole('button'))
       .find((el) => el.getAttribute('data-day') === targetStr);
@@ -62,7 +67,7 @@ describe('Calendar Component', () => {
 
     // Verify a day in the chosen month/year exists and can be selected
     const targetDate = new Date(targetYear, 11, 15); // Dec 15 of target year
-    const targetStr = targetDate.toLocaleDateString();
+    const targetStr = formatDateForCalendar(targetDate);
     let decBtn = (await screenDom
       .findAllByRole('button'))
       .find((el) => el.getAttribute('data-day') === targetStr);
@@ -78,7 +83,7 @@ describe('Calendar Component', () => {
     const nextBtn = await screenDom.findByRole('button', { name: /next month/i });
     await userEvent.click(nextBtn);
 
-    const janStr = new Date(targetYear + 1, 0, 15).toLocaleDateString();
+    const janStr = formatDateForCalendar(new Date(targetYear + 1, 0, 15));
     const janBtn = (await screenDom
       .findAllByRole('button'))
       .find((el) => el.getAttribute('data-day') === janStr);
