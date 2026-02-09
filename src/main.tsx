@@ -18,6 +18,9 @@ if (import.meta.env.DEV) {
     serviceWorker: false,           // Enable request mocking (default: true)
     serviceWorkerUrl: '/mock-sw.js' // Custom service worker path (default: '/mock-sw.js')
   });
+  const { createBrowserClient } = await import('twd-relay/browser');
+  const client = createBrowserClient();
+  client.connect();
 }
 
 createRoot(document.getElementById('root')!).render(

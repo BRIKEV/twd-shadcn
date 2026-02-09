@@ -1,7 +1,8 @@
 import path from "path"
 import tailwindcss from "@tailwindcss/vite"
-import { defineConfig } from 'vite'
+import { defineConfig, type PluginOption } from 'vite'
 import react from '@vitejs/plugin-react'
+import { twdRemote } from 'twd-relay/vite'
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
@@ -13,6 +14,7 @@ export default defineConfig(({ command }) => ({
       },
     }),
     tailwindcss(),
+    twdRemote() as PluginOption,
   ],
   resolve: {
     alias: {
