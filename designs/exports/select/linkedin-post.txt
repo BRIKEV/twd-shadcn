@@ -1,12 +1,11 @@
-How do you test a shadcn/ui Select component?
+Testing a shadcn/ui Select has a hidden challenge: the dropdown options render in a portal — outside the component tree.
 
-Here's what I check:
-- Does it render with the correct combobox role?
-- Does clicking open the dropdown?
-- Can you query portal-rendered options? (hint: screenDomGlobal)
-- Does the selected value update correctly?
+Here's how to handle it:
+→ Query the trigger using its combobox role
+→ Click to open, then use screenDomGlobal to reach portal-rendered options
+→ Select an option and verify the value updates
 
-The tricky part with Select is that options render in a portal — outside the component tree. Swipe through to see how to handle that in your tests.
+This is one of those things you only learn the hard way — or by seeing it in action. Swipe through for the full test code.
 
 Full working examples for 22+ shadcn components:
 https://github.com/BRIKEV/twd-shadcn/

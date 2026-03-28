@@ -1,12 +1,12 @@
-How do you test a shadcn/ui Accordion component?
+Testing a shadcn/ui Accordion is more than checking if it opens and closes.
 
-Here's what I check:
-- Does it render with the correct button roles?
-- Is the first item expanded by default (aria-expanded)?
-- Does clicking expand another item?
-- Does only one stay open at a time?
+You want to make sure:
+→ The correct ARIA roles are in place (button, aria-expanded)
+→ The first panel is expanded by default
+→ Clicking a header expands its content
+→ Only one panel stays open at a time
 
-These are simple questions but getting accessibility right matters. Swipe through to see the test code and how it works in the real browser.
+Swipe through to see how I test this with real browser interactions — no jsdom, no guesswork.
 
 Full working examples for 22+ shadcn components:
 https://github.com/BRIKEV/twd-shadcn/
