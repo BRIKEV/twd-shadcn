@@ -1,0 +1,1209 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "o8hQa",
+      "x": 0,
+      "y": 0,
+      "name": "Slide 1 - Hook",
+      "width": 1080,
+      "height": 1350,
+      "fill": "#0f172a",
+      "layout": "vertical",
+      "gap": 40,
+      "padding": 80,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "qdKft",
+          "name": "brandTag",
+          "fill": "#228387",
+          "content": "TWD + SHADCN/UI",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 28,
+          "fontWeight": "600",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "id": "0OzMc",
+          "name": "headline1",
+          "fill": "#f8fafc",
+          "content": "Testing shadcn\nComponents?",
+          "lineHeight": 1.1,
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 96,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "ce2m1",
+          "name": "Accordion Wireframe",
+          "width": 700,
+          "fill": "#1e293b",
+          "cornerRadius": 12,
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "left": 4
+            },
+            "fill": "#228387"
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            20,
+            24
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "ecZzr",
+              "name": "row1",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "voNAD",
+                  "name": "r1label",
+                  "fill": "#94a3b8",
+                  "content": "▶ Product Information",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "DA12u",
+                  "name": "r1arrow",
+                  "fill": "#228387",
+                  "content": "▼",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "IBWoj",
+              "name": "r1content",
+              "fill": "#64748b",
+              "textGrowth": "fixed-width",
+              "width": 640,
+              "content": "Our flagship product combines cutting-edge technology with sleek design...",
+              "fontFamily": "Inter",
+              "fontSize": 28
+            },
+            {
+              "type": "frame",
+              "id": "OuKoO",
+              "name": "row2",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Pj3HF",
+                  "name": "r2label",
+                  "fill": "#94a3b8",
+                  "content": "▶ Shipping Details",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "P3wwu",
+                  "name": "r2arrow",
+                  "fill": "#475569",
+                  "content": "▸",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WoFmw",
+              "name": "row3",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zYqMP",
+                  "name": "r3label",
+                  "fill": "#94a3b8",
+                  "content": "▶ Return Policy",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "V8M8i",
+                  "name": "r3arrow",
+                  "fill": "#475569",
+                  "content": "▸",
+                  "fontFamily": "Inter",
+                  "fontSize": 32,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "5q0NS",
+          "name": "footer1",
+          "fill": "#64748b",
+          "content": "Swipe to learn how →",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 28
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "2IuXI",
+      "x": 1180,
+      "y": 0,
+      "name": "Slide 2 - Problem",
+      "width": 1080,
+      "height": 1350,
+      "fill": "#0f172a",
+      "layout": "vertical",
+      "gap": 48,
+      "padding": 80,
+      "justifyContent": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "Q7v0V",
+          "name": "h2",
+          "fill": "#f8fafc",
+          "content": "The problem with\nUI testing...",
+          "lineHeight": 1.1,
+          "fontFamily": "Inter",
+          "fontSize": 80,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "iDRfA",
+          "name": "Pain Points",
+          "layout": "vertical",
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "001zB",
+              "name": "p1",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UQkpM",
+                  "name": "p1x",
+                  "fill": "#ef4444",
+                  "content": "✗",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "c0RxI",
+                  "name": "p1t",
+                  "fill": "#94a3b8",
+                  "content": "Tests break on every refactor",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rtt7s",
+              "name": "p2",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HdJKe",
+                  "name": "p2x",
+                  "fill": "#ef4444",
+                  "content": "✗",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "OJ6fm",
+                  "name": "p2t",
+                  "fill": "#94a3b8",
+                  "content": "No real browser interaction",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "zmSak",
+              "name": "p3",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ap44h",
+                  "name": "p3x",
+                  "fill": "#ef4444",
+                  "content": "✗",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "oM3zV",
+                  "name": "p3t",
+                  "fill": "#94a3b8",
+                  "content": "Can't see what you're testing",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lY94T",
+              "name": "p4",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "RdrFb",
+                  "name": "p4x",
+                  "fill": "#ef4444",
+                  "content": "✗",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "KFfOt",
+                  "name": "p4t",
+                  "fill": "#94a3b8",
+                  "content": "Slow feedback loops",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "dm5BN",
+      "x": 2360,
+      "y": 0,
+      "name": "Slide 3 - Meet TWD",
+      "width": 1080,
+      "height": 1350,
+      "fill": "#0f172a",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 80,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "0cjJk",
+          "name": "introLbl",
+          "fill": "#228387",
+          "content": "INTRODUCING",
+          "fontFamily": "Inter",
+          "fontSize": 28,
+          "fontWeight": "600",
+          "letterSpacing": 2
+        },
+        {
+          "type": "text",
+          "id": "7qXJv",
+          "name": "twdTitle",
+          "fill": "#f8fafc",
+          "content": "TWD",
+          "fontFamily": "Inter",
+          "fontSize": 120,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "EAoE4",
+          "name": "twdSub",
+          "fill": "#94a3b8",
+          "content": "Test While Developing",
+          "fontFamily": "Inter",
+          "fontSize": 40,
+          "fontWeight": "500"
+        },
+        {
+          "type": "frame",
+          "id": "JyVim",
+          "name": "Split Wireframe",
+          "width": 800,
+          "gap": 20,
+          "children": [
+            {
+              "type": "frame",
+              "id": "3Myum",
+              "name": "lPanel",
+              "width": "fill_container",
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PjHnT",
+                  "name": "lLabel",
+                  "fill": "#228387",
+                  "content": "Your App",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "sqW3d",
+                  "name": "lContent",
+                  "fill": "#64748b",
+                  "content": "[Accordion Component]",
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ZIigo",
+              "name": "rPanel",
+              "width": "fill_container",
+              "fill": "#1e293b",
+              "cornerRadius": 12,
+              "stroke": {
+                "align": "inside",
+                "thickness": 2,
+                "fill": "#228387"
+              },
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 24,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NFp9C",
+                  "name": "rLabel",
+                  "fill": "#22c55e",
+                  "content": "TWD Sidebar ✓",
+                  "fontFamily": "Inter",
+                  "fontSize": 28,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "8j81Z",
+                  "name": "rContent",
+                  "fill": "#64748b",
+                  "content": "Tests run here\nin real browser",
+                  "fontFamily": "Inter",
+                  "fontSize": 28
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "0105b",
+          "name": "foot3",
+          "fill": "#64748b",
+          "content": "Tests run next to your app as you develop",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 28
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "IP5Fq",
+      "x": 3540,
+      "y": 0,
+      "name": "Slide 4 - Test Code",
+      "width": 1080,
+      "height": 1350,
+      "fill": "#0f172a",
+      "layout": "vertical",
+      "gap": 40,
+      "padding": 80,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "dnsjR",
+          "name": "h4",
+          "fill": "#f8fafc",
+          "content": "The Test Code",
+          "fontFamily": "Inter",
+          "fontSize": 80,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "6ryuy",
+          "name": "Code Block",
+          "width": 860,
+          "fill": "#1e293b",
+          "cornerRadius": 12,
+          "layout": "vertical",
+          "gap": 6,
+          "padding": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "bL1Pk",
+              "name": "cl1",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gV9AS",
+                  "name": "cl1a",
+                  "fill": "#c084fc",
+                  "content": "await ",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "eERcJ",
+                  "name": "cl1b",
+                  "fill": "#94a3b8",
+                  "content": "twd.",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "1iSda",
+                  "name": "cl1c",
+                  "fill": "#228387",
+                  "content": "visit",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "xWaYY",
+                  "name": "cl1d",
+                  "fill": "#94a3b8",
+                  "content": "(",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "yXe1u",
+                  "name": "cl1e",
+                  "fill": "#22c55e",
+                  "content": "'/accordion'",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "TlTxp",
+                  "name": "cl1f",
+                  "fill": "#94a3b8",
+                  "content": ");",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xrFVr",
+              "name": "sp1",
+              "width": 10,
+              "height": 12
+            },
+            {
+              "type": "frame",
+              "id": "FGvSg",
+              "name": "cl2",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NHaOZ",
+                  "name": "cl2a",
+                  "fill": "#c084fc",
+                  "content": "const ",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "YbYmH",
+                  "name": "cl2b",
+                  "fill": "#94a3b8",
+                  "content": "btn = ",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "qkMG1",
+                  "name": "cl2c",
+                  "fill": "#c084fc",
+                  "content": "await ",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "Wqilm",
+                  "name": "cl2d",
+                  "fill": "#94a3b8",
+                  "content": "screenDom",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CEiZx",
+              "name": "cl3",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "xQUTv",
+                  "name": "cl3a",
+                  "fill": "#94a3b8",
+                  "content": "  .",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "M5tbG",
+                  "name": "cl3b",
+                  "fill": "#228387",
+                  "content": "findByRole",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "FzIc5",
+                  "name": "cl3c",
+                  "fill": "#94a3b8",
+                  "content": "(",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "MmlAn",
+                  "name": "cl3d",
+                  "fill": "#22c55e",
+                  "content": "'button'",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "m7Wn5",
+                  "name": "cl3e",
+                  "fill": "#94a3b8",
+                  "content": ",",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "sqA7e",
+              "name": "cl4",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "oAIdS",
+                  "name": "cl4a",
+                  "fill": "#94a3b8",
+                  "content": "  { name: ",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "lKgid",
+                  "name": "cl4b",
+                  "fill": "#22c55e",
+                  "content": "'Product Info'",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "rGuvI",
+                  "name": "cl4c",
+                  "fill": "#94a3b8",
+                  "content": " });",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "z8TJJ",
+              "name": "sp2",
+              "width": 10,
+              "height": 12
+            },
+            {
+              "type": "frame",
+              "id": "ST1HC",
+              "name": "cl5",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BlrOg",
+                  "name": "cl5a",
+                  "fill": "#94a3b8",
+                  "content": "twd.",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "enu14",
+                  "name": "cl5b",
+                  "fill": "#228387",
+                  "content": "should",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "xeOoK",
+                  "name": "cl5c",
+                  "fill": "#94a3b8",
+                  "content": "(btn,",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Zh4sX",
+              "name": "cl6",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eMpwf",
+                  "name": "cl6a",
+                  "fill": "#94a3b8",
+                  "content": "  ",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "bJTh6",
+                  "name": "cl6b",
+                  "fill": "#22c55e",
+                  "content": "'have.attr'",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "sBPRt",
+                  "name": "cl6c",
+                  "fill": "#94a3b8",
+                  "content": ",",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "x0Rb4",
+              "name": "cl7",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fVxly",
+                  "name": "cl7a",
+                  "fill": "#94a3b8",
+                  "content": "  ",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "Cij7l",
+                  "name": "cl7b",
+                  "fill": "#22c55e",
+                  "content": "'aria-expanded'",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "anpVA",
+                  "name": "cl7c",
+                  "fill": "#94a3b8",
+                  "content": ", ",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "RRy3b",
+                  "name": "cl7d",
+                  "fill": "#22c55e",
+                  "content": "'true'",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "3Q2rK",
+                  "name": "cl7e",
+                  "fill": "#94a3b8",
+                  "content": ");",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "dSZBB",
+              "name": "sp3",
+              "width": 10,
+              "height": 12
+            },
+            {
+              "type": "frame",
+              "id": "r6Ffj",
+              "name": "cl8",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZvYpv",
+                  "name": "cl8a",
+                  "fill": "#c084fc",
+                  "content": "await ",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "S6tOM",
+                  "name": "cl8b",
+                  "fill": "#94a3b8",
+                  "content": "userEvent.",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "fChkV",
+                  "name": "cl8c",
+                  "fill": "#228387",
+                  "content": "click",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "A1Xbp",
+                  "name": "cl8d",
+                  "fill": "#94a3b8",
+                  "content": "(btn);",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "igkNs",
+          "name": "foot4",
+          "fill": "#64748b",
+          "content": "Real browser queries · Real user events · Real assertions",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 28
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "rV3EH",
+      "x": 4720,
+      "y": 0,
+      "name": "Slide 5 - What It Tests",
+      "width": 1080,
+      "height": 1350,
+      "fill": "#0f172a",
+      "layout": "vertical",
+      "gap": 48,
+      "padding": 80,
+      "justifyContent": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "u0u8M",
+          "name": "h5",
+          "fill": "#f8fafc",
+          "content": "What this test\nverifies",
+          "lineHeight": 1.1,
+          "fontFamily": "Inter",
+          "fontSize": 80,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "3UkLx",
+          "name": "checks",
+          "layout": "vertical",
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "PivPY",
+              "name": "c1",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "8Ro2o",
+                  "name": "c1m",
+                  "fill": "#22c55e",
+                  "content": "✓",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "b8sSU",
+                  "name": "c1t",
+                  "fill": "#f8fafc",
+                  "content": "Accordion renders correctly",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "XaO58",
+              "name": "c2",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "89UkK",
+                  "name": "c2m",
+                  "fill": "#22c55e",
+                  "content": "✓",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Foi4M",
+                  "name": "c2t",
+                  "fill": "#f8fafc",
+                  "content": "First item expanded by default",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "ypBxC",
+              "name": "c3",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SptkL",
+                  "name": "c3m",
+                  "fill": "#22c55e",
+                  "content": "✓",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "yLj3d",
+                  "name": "c3t",
+                  "fill": "#f8fafc",
+                  "content": "Click expands another item",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UuNZn",
+              "name": "c4",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "quaDd",
+                  "name": "c4m",
+                  "fill": "#22c55e",
+                  "content": "✓",
+                  "fontFamily": "Inter",
+                  "fontSize": 48,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "K5Hzx",
+                  "name": "c4t",
+                  "fill": "#f8fafc",
+                  "content": "Only one item open at a time",
+                  "fontFamily": "Inter",
+                  "fontSize": 36,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "8aIT1",
+          "name": "f5",
+          "fill": "#64748b",
+          "textGrowth": "fixed-width",
+          "width": 920,
+          "content": "All verified in the real browser — instant feedback as you code",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 28
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "nB9Rn",
+      "x": 5900,
+      "y": 0,
+      "name": "Slide 6 - CTA",
+      "width": 1080,
+      "height": 1350,
+      "fill": "#0f172a",
+      "layout": "vertical",
+      "gap": 48,
+      "padding": 80,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "p26m1",
+          "name": "h6",
+          "fill": "#f8fafc",
+          "content": "Try TWD Today",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 96,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "MgY2u",
+          "name": "Install Command",
+          "fill": "#1e293b",
+          "cornerRadius": 12,
+          "padding": [
+            24,
+            32
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "RVAOm",
+              "name": "cmdD",
+              "fill": "#22c55e",
+              "content": "$ ",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "IYe3R",
+              "name": "cmdT",
+              "fill": "#f8fafc",
+              "content": "npm install twd-js",
+              "fontFamily": "JetBrains Mono",
+              "fontSize": 32,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fvMbq",
+          "name": "links",
+          "layout": "vertical",
+          "gap": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "RP58c",
+              "name": "exL",
+              "fill": "#94a3b8",
+              "content": "Full examples:",
+              "fontFamily": "Inter",
+              "fontSize": 32
+            },
+            {
+              "type": "text",
+              "id": "qwqTr",
+              "name": "exV",
+              "fill": "#228387",
+              "content": "github.com/BRIKEV/twd-shadcn",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "GW5Yg",
+              "name": "doL",
+              "fill": "#94a3b8",
+              "content": "Docs:",
+              "fontFamily": "Inter",
+              "fontSize": 32
+            },
+            {
+              "type": "text",
+              "id": "GR9IH",
+              "name": "doV",
+              "fill": "#228387",
+              "content": "twd.dev",
+              "fontFamily": "Inter",
+              "fontSize": 32,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "TYEvu",
+          "name": "f6",
+          "fill": "#64748b",
+          "content": "Like & share if this was helpful",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 28
+        }
+      ]
+    }
+  ]
+}
