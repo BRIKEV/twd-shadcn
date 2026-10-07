@@ -5,15 +5,33 @@
 - **Framework**: React 19
 - **Vite base path**: `/` (dev) / `/twd-shadcn/` (build)
 - **Dev server port**: `5173`
+- **App URL**: `http://localhost:5173`
+- **Dev command**: `npm run dev`
+- **Default branch**: `main`
 - **Entry point**: `src/main.tsx`
 - **Public folder**: `public/`
+- **Closing run**: full suite
 
-### Relay Commands
+### Runner Commands
+
+twd-cli drives its own headless browser — only the dev server has to be up (`npm run dev`).
 
 ```bash
 # Run all tests
-npx twd-relay run
+npm run test:ci
+
+# Run specific tests by name (matches "suite > test", case-insensitive; repeatable)
+npx twd-cli run --test "should render the list"
+npx twd-cli run --test "should create" --test "should show the error"
+
+# Only the tests this branch added or changed
+npx twd-cli run --changed-since origin/main
+
+# Record a run to video (one clip per matched test, needs ffmpeg)
+npx twd-cli run --record --test "should render the list"
 ```
+
+Every run writes `.twd/report/`: `run.json` (the result), `summary.md` and `index.html`. The folder is replaced on each run.
 
 ## Standard Imports
 
